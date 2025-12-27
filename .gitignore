@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+.Python
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Data files (don't upload large datasets)
+data/*.csv
+data/*.xlsx
+!data/.gitkeep
+
+# Results (don't upload outputs)
+results/*.csv
+results/*.png
+results/*.pdf
+!results/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
