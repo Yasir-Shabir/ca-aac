@@ -33,8 +33,8 @@ docker-compose up
 
 Muhammad Yasir Shabir
 
-Department of Computer Science and Information Technology, University of Kotli Azad Jammu and Kashmir, Kotli
-AJK
+Department of Computer Science and Information Technology, 
+University of Kotli Azad Jammu and Kashmir, Kotli AJK
 
 ## Citation
 
