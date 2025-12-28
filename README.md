@@ -31,17 +31,16 @@ docker-compose up
 
 ## Author
 
-echo "## Author
 
-Muhammad Yasir Shabir
-Department of Computer Science and Information Technology,  
+Muhammad Yasir Shabir  
+Department of Computer Science and Information Technology,    
 University of Kotli Azad Jammu and Kashmir, Kotli AJK
 
-Zahid Mahmood
-Department of Computer Science and Information Technology,  
+Zahid Mahmood  
+Department of Computer Science and Information Technology,    
 University of Kotli Azad Jammu and Kashmir, Kotli AJK
 
-Hira Rasheed
+Hira Rasheed  
 Faculty of Computer Science and Information Technology, Universiti Malaya, Kuala Lumpur, 50603, Malaysia
 
 
