@@ -3,7 +3,7 @@
 CA-AAC: Context-Aware Adaptive Access Control System
 ===================================================
 
-Author: Your Name
+Author: Yasir Shabir
 Date: 2025
 License: MIT
 
@@ -69,17 +69,17 @@ class RabinAccessControl:
         print("-" * 80)
         
         if not os.path.exists(filepath):
-            print(f"❌ Error: File not found: {filepath}")
+            print(f" Error: File not found: {filepath}")
             sys.exit(1)
         
         try:
             df = pd.read_csv(filepath)
-            print(f"✅ Dataset loaded successfully")
-            print(f"   Total records: {len(df):,}")
-            print(f"   Total features: {len(df.columns)}")
+            print(f"Dataset loaded successfully")
+            print(f"  Total records: {len(df):,}")
+            print(f"  Total features: {len(df.columns)}")
             return df
         except Exception as e:
-            print(f"❌ Error loading dataset: {e}")
+            print(f"Error loading dataset: {e}")
             sys.exit(1)
     
     def preprocess_data(self, df):
@@ -92,13 +92,13 @@ class RabinAccessControl:
         missing_cols = [col for col in required_cols if col not in df.columns]
         
         if missing_cols:
-            print(f"❌ Missing required columns: {missing_cols}")
+            print(f" Missing required columns: {missing_cols}")
             sys.exit(1)
         
         # Remove missing values
         initial_count = len(df)
         df = df.dropna(subset=required_cols)
-        print(f"✅ Removed missing values: {initial_count:,} → {len(df):,}")
+        print(f"Removed missing values: {initial_count:,} → {len(df):,}")
         
         # Convert labels
         df['decision'] = df['label'].apply(lambda x: 'ALLOW' if x == 0 else 'DENY')
@@ -106,7 +106,7 @@ class RabinAccessControl:
         
         normal_count = (df['decision'] == 'ALLOW').sum()
         attack_count = (df['decision'] == 'DENY').sum()
-        print(f"✅ ALLOW: {normal_count:,} | DENY: {attack_count:,}")
+        print(f" ALLOW: {normal_count:,} | DENY: {attack_count:,}")
         
         # Map to Rabin ACV
         df['rabin_user'] = df['src_ip']
@@ -114,7 +114,7 @@ class RabinAccessControl:
         df['rabin_operation'] = df['proto']
         df['rabin_context'] = df['service']
         
-        print(f"✅ Mapped to Rabin ACV: ⟨User, Resource, Operation, Context⟩")
+        print(f" Mapped to Rabin ACV: ⟨User, Resource, Operation, Context⟩")
         
         return df
     
@@ -135,7 +135,7 @@ class RabinAccessControl:
             if col in df.columns:
                 df[f'{col}_clean'] = df[col].fillna(df[col].median())
         
-        print(f"✅ Features encoded")
+        print(f" Features encoded")
         return df
     
     def train_ml_model(self, df):
@@ -157,7 +157,7 @@ class RabinAccessControl:
             X, y, test_size=0.2, random_state=42, stratify=y
         )
         
-        print(f"✅ Train: {len(X_train):,} | Test: {len(X_test):,}")
+        print(f" Train: {len(X_train):,} | Test: {len(X_test):,}")
         
         # Train Random Forest
         self.model = RandomForestClassifier(
@@ -171,7 +171,7 @@ class RabinAccessControl:
         
         train_acc = self.model.score(X_train, y_train)
         test_acc = self.model.score(X_test, y_test)
-        print(f"✅ Train Acc: {train_acc*100:.2f}% | Test Acc: {test_acc*100:.2f}%")
+        print(f" Train Acc: {train_acc*100:.2f}% | Test Acc: {test_acc*100:.2f}%")
         
         # Get probabilities
         df['threat_probability'] = self.model.predict_proba(X)[:, 1]
@@ -300,7 +300,7 @@ class RabinAccessControl:
         plt.tight_layout()
         output_path = self.output_dir / 'ca_aac_analysis.png'
         plt.savefig(output_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Saved: {output_path}")
+        print(f" Saved: {output_path}")
         
     def export_results(self):
         """Export results to CSV"""
@@ -330,7 +330,7 @@ class RabinAccessControl:
         })
         metrics_df.to_csv(self.output_dir / 'metrics_summary.csv', index=False)
         
-        print(f"✅ Results exported to: {self.output_dir}")
+        print(f" Results exported to: {self.output_dir}")
 
 
 def main():
@@ -382,7 +382,7 @@ def main():
     ca_aac.export_results()
     
     print(f"\n{'='*80}")
-    print("✅ Analysis Complete!")
+    print(" Analysis Complete!")
     print(f"{'='*80}")
 
 
