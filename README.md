@@ -31,7 +31,8 @@ docker-compose up
 
 ## Author
 
-Muhammad Yasir Shabir\\
+Muhammad Yasir Shabir
+
 Department of Computer Science and Information Technology, University of Kotli Azad Jammu and Kashmir, Kotli
 AJK
 
