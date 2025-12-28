@@ -13,7 +13,7 @@ Context-Aware Adaptive Access Control System combining:
 ## Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/ca-aac.git
+git clone https://github.com/Yasir-Shabir/ca-aac.git
 cd ca-aac
 
 # Install dependencies
@@ -31,8 +31,9 @@ docker-compose up
 
 ## Author
 
-**YOUR_NAME**  
-University of Engineering and Technology, Taxila
+Muhammad Yasir Shabir
+Department of Computer Science and Information Technology, University of Kotli Azad Jammu and Kashmir, Kotli
+AJK
 
 ## Citation
 
