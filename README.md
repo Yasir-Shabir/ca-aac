@@ -33,9 +33,10 @@ This approach provides a secure, context-aware, and adaptive solution for access
 **Dataset:** TON_IoT Dataset  
 
 - **Download:** [TON_IoT Dataset](https://research.unsw.edu.au/projects/toniot-datasets)  
-- **Repository Directory:** The file `Train_Test_Network.csv` has been uploaded in this repository.  
-- **Note:** Users can either use the provided file here or download the dataset from the official source.  
+- **Directory:** Place `Train_Test_Network.csv` in the `data` folder before performing the next steps in the repository.  
+- **Note:** Dataset files are **not committed to Git** due to large size. Users need to download them separately.  
 - **Purpose:** This dataset is used for **empirical validation** of the CA-AAC framework and for **training/testing the Machine Learning threat estimation model**.
+
 
 
 
