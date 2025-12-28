@@ -28,6 +28,16 @@ The framework combines:
 
 This approach provides a secure, context-aware, and adaptive solution for access control in ILBS.
 
+## Data
+
+**Dataset:** TON_IoT Dataset  
+
+- **Download:** [TON_IoT Dataset](https://research.unsw.edu.au/projects/toniot-datasets)  
+- **Repository Directory:** The file `Train_Test_Network.csv` has been uploaded in this repository.  
+- **Note:** Users can either use the provided file here or download the dataset from the official source.  
+- **Purpose:** This dataset is used for **empirical validation** of the CA-AAC framework and for **training/testing the Machine Learning threat estimation model**.
+
+
 
 ## Quick Start
 ```bash
